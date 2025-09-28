@@ -1177,23 +1177,7 @@ section {
     margin: 2rem 0;
 }
 
-/* Week 7 Images - Face Blurring */
-.week-card:nth-of-type(7) .visit-image img {
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-}
-
-.week-card:nth-of-type(7) .visit-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    z-index: 1;
-    pointer-events: none;
-}
+/* Week 5 Images - Company Law & Business Law - Fixed blur issue */
 
 .image-grid {
     display: grid;
@@ -1216,8 +1200,12 @@ section {
 
 .visit-image img {
     width: 100%;
-    height: 250px;
+    height: auto;
+    max-height: 250px;
     object-fit: cover;
+    object-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
     transition: transform 0.3s ease;
 }
 
